@@ -1,0 +1,66 @@
+.wrapper{
+    background-color: var(--white);
+}
+.holder{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 20px 0;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+.logo_wrapper h2{
+    font-size: 18px;
+    color: var(--dark);
+}
+.search_wrapper{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.search_wrapper input{
+    border: none;
+    outline: 1px solid var(--border-color);
+    padding: 10px;
+    border-radius: 2px;
+    flex: 1;
+}
+.search_wrapper input:focus{
+    outline: 1px solid var(--theme);
+}
+.search_wrapper button{
+    background-color: var(--theme);
+    padding: 10px;
+    color:  var(--dark);
+    font-size: 16px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+.search_wrapper button:hover{
+    background-color: var(--yellow);
+    transition: 0.3s;
+}
+.login_wrapper{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+}
+.login_wrapper button{
+    color: var(--dark);
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.login_wrapper button svg{
+    font-size: 22px;
+    transition: 0.3s;
+}
+.login_wrapper button:hover svg{
+    color: var(--theme);
+    transition: 0.3s;
+}
