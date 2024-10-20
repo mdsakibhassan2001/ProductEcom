@@ -5,11 +5,10 @@ import style from './css/mainSlider.module.css'
 import oil from '../../../public/assets/1710569991103_Olive-Oils-Land.webp'
 import roxanne from '../../../public/assets/Roxanne.webp'
 import cold_care from '../../../public/assets/1710570260155_Gold-Care.webp'
-import { CiCircleChevRight,CiCircleChevLeft } from "react-icons/ci";
 import Image from 'next/image';
 export default function MainSlider() {
   var settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     autoplay: true,
     speed: 500,
