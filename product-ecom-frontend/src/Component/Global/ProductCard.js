@@ -1,19 +1,35 @@
 import React from 'react'
 import style from './css/productCard.module.css'
 import Link from 'next/link'
-export default function ProductCard() {
+import { FaBangladeshiTakaSign } from "react-icons/fa6";
+import { FaHeart } from "react-icons/fa";
+import { IoStarHalf,IoStar } from "react-icons/io5";
+import Image from 'next/image';
+export default function ProductCard({productItem}) {
   return (
-    <div className={style.wrapper}>
-        <div className={style.holder}>
-        <div className={style.card}>
-                <div className={style.card_body}>
-                    {/* <Image src={}/> */}
-                </div>
-                <div className={style.card_footer}>
-                    <Link href="/">Roxanne Numbers 3 Eau De Parfum For Men 100 ML</Link>
-                </div>
-            </div>
-        </div>
-    </div>
-  )
+        <>
+        {
+            productItem.map((item,index)=>{
+            return  <div key={index} className={style.card}>
+              <Link href="/" className={style.card_head}>
+                  <Image alt="#" src={item.image}/>
+              </Link>
+              <div className={style.card_body}>
+                  <div className={style.title}><small>Just For Baby</small><small className={style.star_icon}><IoStar /><IoStar /><IoStar /><IoStarHalf /><IoStarHalf /></small></div>
+                  <Link href="/">{item.title}</Link>
+                  <div className={style.price_wrapper}>
+                    <span className={style.offer_price}><FaBangladeshiTakaSign />{item.offer_price}</span> <span className={style.price}><FaBangladeshiTakaSign />{item.price} </span><small>{item.offer_percent}% off</small>
+                  </div>
+              </div>
+              <div className={style.card_footer}>
+                 <div className={style.button_wrapper}>
+                     <button className={style.wishlist}><FaHeart /></button>
+                    <button className={style.addtobag}> Add Tob Bag</button>
+                 </div>
+              </div>
+          </div>
+            })
+          }
+        </>
+    )
 }
