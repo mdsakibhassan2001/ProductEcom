@@ -26,10 +26,8 @@ export default function Category() {
                         <Image src={item.img} alt="image"/>
                         <span>{item.title}</span>
                     </Link>
-                    
                     })
                 }
-              
         </div>
     </div>
   )
