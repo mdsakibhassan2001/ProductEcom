@@ -1,19 +1,30 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 import style from './css/productCard.module.css'
 import Link from 'next/link'
 import { FaBangladeshiTakaSign } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa";
 import { IoStarHalf,IoStar } from "react-icons/io5";
 import Image from 'next/image';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector} from 'react-redux';
 import { addCard } from '@/Redux/features/productCard/ProductCardSlice';
 export default function ProductCard({productItem}) {
   const dispatch=useDispatch()
-
-  const onAddToBagClick = (item) => {
-    dispatch(addCard(item));
+  const onAddToBagClick = (item,index) => {
+    dispatch(addCard({item}));
+    let cartItem = {}; 
+    const cardValue = window.localStorage.getItem('cardValue');
+    if (cardValue) {
+      cartItem = JSON.parse(cardValue);
+      cartItem[index] = item; 
+      
+    }else{ 
+      cartItem[index] = item; 
+    }
+    window.localStorage.setItem('cardValue', JSON.stringify(cartItem));
+   
   };
+
   return (
         <>
         {
@@ -23,6 +34,7 @@ export default function ProductCard({productItem}) {
                   <Image alt="#" src={item.image}/>
               </Link>
               <div className={style.card_body}>
+                
                   <div className={style.title}><small>Just For Baby</small><small className={style.star_icon}><IoStar /><IoStar /><IoStar /><IoStarHalf /><IoStarHalf /></small></div>
                   <Link href="/">{item.title}</Link>
                   <div className={style.price_wrapper}>
@@ -32,7 +44,7 @@ export default function ProductCard({productItem}) {
               <div className={style.card_footer}>
                  <div className={style.button_wrapper}>
                      <button className={style.wishlist}><FaHeart /></button>
-                     <button onClick={()=>onAddToBagClick(item)} className={style.addtobag}> Add To Bag</button>
+                     <button onClick={()=>onAddToBagClick(item,index+1)} className={style.addtobag}> Add To Bag</button>
                   </div>
               </div>
           </div>

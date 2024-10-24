@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   cardValue:[],
-  cardSum:0
 };
 
 const productCardSlice = createSlice({
@@ -9,8 +8,13 @@ const productCardSlice = createSlice({
   initialState, 
   reducers: {
     addCard: (state,{payload}) => {
-        state.cardValue.push({...payload})
-        state.cardSum += 1
+      if(state.cardValue.length==0){
+        state.cardValue.push({id: 1,status:"panding",...payload})
+      }else{
+        const lastEliment=state.cardValue.at(-1)
+        state.cardValue.push({id:lastEliment.id+1,status:"panding",...payload})
+      }
+       
     },
   },
 });

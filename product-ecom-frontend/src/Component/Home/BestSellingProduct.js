@@ -7,13 +7,13 @@ import Purifying_Tonic from '../../../public/assets/Golden_Rose_Purifying_Tonic.
 export default function BestSellingProduct() {
   const productItem =[
     {title:"Roxanne Numbers 3 Eau De Parfum For Men 100 ML ",price:3750,offer_price:3000,image:Roxanne_Numbers_3,offer_percent:10},
+    {title:"Roxanne Numbers 3 Eau De ",price:3750,offer_price:3000,image:Roxanne_Pour,offer_percent:10},
+    {title:"Roxanne Numbers 3 Eau ",price:3750,offer_price:3000,image:Purifying_Tonic,offer_percent:10},
+    {title:"Roxanne Numbers 3 Eau De Parfum For Men ",price:3750,offer_price:3000,image:Roxanne_Pour,offer_percent:10},
+    {title:"Roxanne Numbers 3 Eau De Parfum For",price:3750,offer_price:3000,image:Roxanne_Pour,offer_percent:10},
     {title:"Roxanne Numbers 3 Eau De Parfum For Men 100 ML",price:3750,offer_price:3000,image:Roxanne_Pour,offer_percent:10},
-    {title:"Roxanne Numbers 3 Eau De Parfum For Men 100 ML",price:3750,offer_price:3000,image:Purifying_Tonic,offer_percent:10},
-    {title:"Roxanne Numbers 3 Eau De Parfum For Men 100 ML",price:3750,offer_price:3000,image:Roxanne_Pour,offer_percent:10},
-    {title:"Roxanne Numbers 3 Eau De Parfum For Men 100 ML",price:3750,offer_price:3000,image:Roxanne_Pour,offer_percent:10},
-    {title:"Roxanne Numbers 3 Eau De Parfum For Men 100 ML",price:3750,offer_price:3000,image:Roxanne_Pour,offer_percent:10},
-    {title:"Roxanne Numbers 3 Eau De Parfum For Men 100 ML",price:3750,offer_price:3000,image:Roxanne_Pour,offer_percent:10},
-    {title:"Roxanne Numbers 3 Eau De Parfum For Men 100 ML",price:3750,offer_price:3000,image:Roxanne_Pour,offer_percent:10},
+    {title:"Roxanne Numbers 3 Eau De Parfum ",price:3750,offer_price:3000,image:Roxanne_Pour,offer_percent:10},
+    {title:"Roxanne Numbers 3",price:3750,offer_price:3000,image:Roxanne_Pour,offer_percent:10},
   ]
   return (
     <div className={style.wrapper}>

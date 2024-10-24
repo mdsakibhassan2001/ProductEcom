@@ -5,9 +5,9 @@ import { IoSearchOutline } from "react-icons/io5";
 import { IoCartOutline } from "react-icons/io5";
 import { FaCircleUser } from "react-icons/fa6";
 import { useSelector } from 'react-redux';
-import { addCard } from '@/Redux/features/productCard/ProductCardSlice';
 export default function LogoSearch() {
-    const cardSum = useSelector((state) => state.productCard.cardSum);
+    const card_item = useSelector((state) => state.productCard.cardValue);
+    console.log(card_item)
   return (
     <div className={style.wrapper}>
         <div className={style.holder}>
@@ -19,7 +19,7 @@ export default function LogoSearch() {
                 <button><IoSearchOutline /></button>
             </div>
             <div className={style.login_wrapper}>
-                <button><small>{cardSum}</small><IoCartOutline /></button>
+                <button><small></small><IoCartOutline /></button>
                 <button><FaCircleUser /> Login</button>
             </div>
         </div>
