@@ -1,9 +1,13 @@
+'use client'
 import React from 'react'
 import style from './css/logoSearch.module.css'
 import { IoSearchOutline } from "react-icons/io5";
 import { IoCartOutline } from "react-icons/io5";
 import { FaCircleUser } from "react-icons/fa6";
+import { useSelector } from 'react-redux';
+import { addCard } from '@/Redux/features/productCard/ProductCardSlice';
 export default function LogoSearch() {
+    const cardSum = useSelector((state) => state.productCard.cardSum);
   return (
     <div className={style.wrapper}>
         <div className={style.holder}>
@@ -15,7 +19,7 @@ export default function LogoSearch() {
                 <button><IoSearchOutline /></button>
             </div>
             <div className={style.login_wrapper}>
-                <button><IoCartOutline /></button>
+                <button><small>{cardSum}</small><IoCartOutline /></button>
                 <button><FaCircleUser /> Login</button>
             </div>
         </div>

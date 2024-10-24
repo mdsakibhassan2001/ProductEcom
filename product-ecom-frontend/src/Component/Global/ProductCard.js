@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import style from './css/productCard.module.css'
 import Link from 'next/link'
@@ -5,7 +6,14 @@ import { FaBangladeshiTakaSign } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa";
 import { IoStarHalf,IoStar } from "react-icons/io5";
 import Image from 'next/image';
+import { useDispatch } from 'react-redux';
+import { addCard } from '@/Redux/features/productCard/ProductCardSlice';
 export default function ProductCard({productItem}) {
+  const dispatch=useDispatch()
+
+  const onAddToBagClick = (item) => {
+    dispatch(addCard(item));
+  };
   return (
         <>
         {
@@ -24,8 +32,8 @@ export default function ProductCard({productItem}) {
               <div className={style.card_footer}>
                  <div className={style.button_wrapper}>
                      <button className={style.wishlist}><FaHeart /></button>
-                    <button className={style.addtobag}> Add Tob Bag</button>
-                 </div>
+                     <button onClick={()=>onAddToBagClick(item)} className={style.addtobag}> Add To Bag</button>
+                  </div>
               </div>
           </div>
             })

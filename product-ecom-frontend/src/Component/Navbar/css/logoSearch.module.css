@@ -55,6 +55,24 @@
     display: flex;
     align-items: center;
     gap: 3px;
+    position: relative;
+}
+.login_wrapper button small{
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    background-color: var(--theme);
+    border-radius: 100%;
+    width: 14px;
+    height: 14px;
+    padding: 4px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: var(--dark);
+    
 }
 .login_wrapper button svg{
     font-size: 22px;

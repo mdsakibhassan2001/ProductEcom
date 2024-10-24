@@ -1,7 +1,8 @@
-import { configureStore } from '@reduxjs/toolkit'
-import counterReducer from '../Redux/features/counter/counterSlice'
-export default configureStore({
-  reducer: {
-    counter:counterReducer,
+import { configureStore } from "@reduxjs/toolkit";
+import productCardSlice from './features/productCard/ProductCardSlice'
+const store=configureStore({
+  reducer:{
+    productCard:productCardSlice,
   },
 })
+export default store;
