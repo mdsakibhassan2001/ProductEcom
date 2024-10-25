@@ -4,7 +4,7 @@
   max-width: 1200px;
   width: 90%;
   margin: auto;
-  padding: 30px 0px;
+  padding: 50px 0px;
 }
 .logo_wrapper {
   display: flex;
@@ -26,6 +26,7 @@
 .content_wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  padding-bottom: 30px;
 }
 .about_wrapper {
   display: flex;
@@ -87,11 +88,47 @@
   transition: 0.3s;
   color: var(--black);
 }
+.signin_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.signin_wrapper p {
+  color: var(--light-dark);
+  line-height: 24px;
+}
+.inpur_wrapper {
+  display: flex;
+  gap: 5px;
+}
+.inpur_wrapper input {
+  display: flex;
+  border: none;
+  outline: 1px solid var(--border-color);
+  padding: 10px;
+  border-radius: 2px;
+}
+.inpur_wrapper input:focus {
+  outline: 1px solid var(--theme);
+}
+.inpur_wrapper button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: none;
+  outline: 1px solid var(--border-color);
+  background-color: var(--theme);
+}
+.inpur_wrapper button:hover {
+  background-color: var(--theme_dive);
+}
 .payment_img_wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
   margin-top: 20px;
   padding: 10px 0;
 }
