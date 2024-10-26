@@ -1,32 +1,32 @@
-.wrapper{
-    background-color: var(--theme);
-    position: sticky;
-    z-index: 12;
-    top: 76px;
+.wrapper {
+  background-color: var(--theme);
+  position: sticky;
+  z-index: 11;
+  top: 76px;
 }
-.holder{
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
+.holder {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
 }
-.holder ul{
-    display: flex;
-    padding: 0;
-    margin: 0;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
+.holder ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
-.holder ul li{
-    list-style: none;
+.holder ul li {
+  list-style: none;
 }
-.holder ul li a{
-    text-decoration: none;
-    color: var(--dark);
-    transition: 0.3s;
+.holder ul li a {
+  text-decoration: none;
+  color: var(--dark);
+  transition: 0.3s;
 }
-.holder ul li:hover a{
-    color: var(--back);
-    transition: 0.3s;
+.holder ul li:hover a {
+  color: var(--back);
+  transition: 0.3s;
 }

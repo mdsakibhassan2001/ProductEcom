@@ -1,0 +1,29 @@
+.wrapper {
+  background-color: var(--modal-bg);
+  inset: 0;
+  position: absolute;
+  z-index: 13;
+  height: 100vh;
+}
+.holder {
+  background-color: var(--white);
+  width: 420px;
+  right: 0;
+  position: absolute;
+  height: 100vh;
+}
+.head_wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.head_wrapper button {
+  background-color: transparent;
+}
+.head_wrapper h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.head_wrapper button svg {
+  font-size: 25px;
+}
