@@ -1,13 +1,20 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import style from "./css/logoSearch.module.css";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoCartOutline } from "react-icons/io5";
 import { FaCircleUser } from "react-icons/fa6";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setShowCard } from '@/Redux/features/productCard/ProductCardSlice';
 export default function LogoSearch() {
+  const dispatch=useDispatch()
+  useEffect(() => {
+     const cardValue=window.localStorage.getItem('cardValue');
+     const finalItems=cardValue?JSON.parse(cardValue):[];
+      dispatch(setShowCard(finalItems))
+      window.localStorage.setItem("cardValue", JSON.stringify(finalItems));
+  }, [dispatch])
   const card_item = useSelector((state) => state.productCard.cardValue);
-  console.log(card_item);
   return (
     <div className={style.wrapper}>
       <div className={style.holder}>
@@ -22,7 +29,7 @@ export default function LogoSearch() {
         </div>
         <div className={style.login_wrapper}>
           <button>
-            <small>1</small>
+            <small>{card_item.length}</small>
             <IoCartOutline />
           </button>
           <button>

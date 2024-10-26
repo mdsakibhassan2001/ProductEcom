@@ -1,5 +1,8 @@
 .wrapper{
     background-color: var(--theme);
+    position: sticky;
+    z-index: 12;
+    top: 76px;
 }
 .holder{
     width: 90%;
