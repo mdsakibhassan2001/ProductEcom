@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   cardValue:[],
+  cardShowPop:false,
 };
 
 const productCardSlice = createSlice({
@@ -9,8 +10,11 @@ const productCardSlice = createSlice({
   reducers: {
     setShowCard:(state,action)=>{
       state.cardValue=action.payload;
+    },
+    setCardShowPop:(state,action)=>{
+      state.cardShowPop=action.payload;
     }
   },
 });
-export const { setShowCard } = productCardSlice.actions; 
+export const { setShowCard,setCardShowPop } = productCardSlice.actions; 
 export default productCardSlice.reducer; 

@@ -7,7 +7,7 @@
 }
 .holder {
   background-color: var(--white);
-  width: 420px;
+  width: 400px;
   right: 0;
   position: absolute;
   height: 100vh;
@@ -15,7 +15,8 @@
 .head_wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 10px 15px;
+  border-bottom: 1px solid var(--light-gray);
 }
 .head_wrapper button {
   background-color: transparent;
@@ -25,5 +26,176 @@
   font-weight: 500;
 }
 .head_wrapper button svg {
-  font-size: 25px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+.head_wrapper button:hover svg{
+  color: var(--red);
+  transition: 0.3s;
+}
+.body_wrapper{
+  height: calc(100vh - 308px);
+  overflow: auto;
+  padding: 10px 15px;
+}
+.item_wrapper{
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid var(--light);
+  padding: 10px 0px;
+}
+.item_wrapper:last-child{
+  border: none;
+}
+.image_wrapper img{
+  width: 60px;
+  height: auto;
+  border: 1px solid var(--light);
+  padding: 2px;
+}
+.text_wrapper{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 8px;
+}
+.title_wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+.title_wrapper p{
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--dark);
+}
+.title_wrapper button{
+  background-color: transparent;
+}
+.title_wrapper button svg{
+  font-size: 16px;
+  color: var(--light-dark);
+  transition: 0.3s;
+}
+.title_wrapper button:hover svg{
+  color: var(--red);
+  transition: 0.3s;
+}
+.price_wrapper{
+  display: flex;
+  gap: 20px;
+}
+.price_wrapper p{
+  display: flex;
+  gap: 10px;
+}
+.price_wrapper p span{
+ font-size: 14px; 
+ font-weight: 500;
+}
+.price_wrapper p span svg{
+  font-size: 12px;
+}
+.price_wrapper p span:first-child{
+  text-decoration: line-through;
+  font-weight: 400;
+  color: var(--red);
+}
+.increment_button{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  outline: 1px solid var(--border-color);
+  border-radius: 50px;
+}
+.increment_button button{
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+.increment_button button svg{
+  font-size: 18px;
+  color: var(--gray);
+  transition: 0.3s;
+}
+.increment_button button:hover svg{
+  color: var(--dark);
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+.increment_button span{
+  font-size: 14px;
+  font-weight: 500;
+}
+.footer_wrapper{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 10px 15px;
+}
+.total_price_wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid var(--border-color);
+  padding: 10px 0px;
+  margin-top: 10px;
+}
+.total_price_holder{
+  display: flex;
+  justify-content: space-between;
+ 
+}
+.total_price_holder span{
+  font-weight: 400;
+}
+.total_price_holder:last-child span{
+  font-weight: 600 !important;
+}
+.total_price_holder small{
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.total_price_holder small svg{
+  font-size: 15px;
+  color: var(--light-dark);
+}
+.total_price_holder:last-child small{
+  font-weight: 600;
+}
+.total_price_holder:last-child small svg{
+  color: var(--black);
+}
+.button_wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+.button_wrapper button{
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: transparent;
+}
+.button_wrapper button:first-child{
+  border: none;
+  outline: 1px solid var(--border-color);
+  transition: 0.3s;
+}
+.button_wrapper button:first-child:hover{
+  outline: 1px solid var(--theme);
+  transition: 0.3s;
+}
+.button_wrapper button:last-child{
+  background-color: var(--theme);
+  transition: 0.3s;
+}
+.button_wrapper button:last-child:hover{
+  background-color: var(--theme_dive);
+  transition: 0.3s;
 }

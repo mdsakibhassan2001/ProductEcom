@@ -7,13 +7,15 @@ import { FaHeart } from "react-icons/fa";
 import { IoStarHalf,IoStar } from "react-icons/io5";
 import Image from 'next/image';
 import { useDispatch, useSelector} from 'react-redux'
-import { setShowCard } from '@/Redux/features/productCard/ProductCardSlice';
+import { setCardShowPop, setShowCard } from '@/Redux/features/productCard/ProductCardSlice';
 export default function ProductCard({productItem}) {
   const dispatch=useDispatch();
   const cardValue = useSelector((state) => state.productCard.cardValue);
   const onAddToBagClick = (item) => {
     dispatch(setShowCard([...cardValue,item]));
     window.localStorage.setItem("cardValue", JSON.stringify([...cardValue, item]))
+    dispatch(setCardShowPop(true))
+    document.body.style.overflow = 'hidden';
   };
   return (
         <>

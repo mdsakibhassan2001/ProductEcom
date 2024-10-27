@@ -5,22 +5,27 @@ import { IoSearchOutline } from "react-icons/io5";
 import { IoCartOutline } from "react-icons/io5";
 import { FaCircleUser } from "react-icons/fa6";
 import { useDispatch, useSelector } from "react-redux";
-import { setShowCard } from "@/Redux/features/productCard/ProductCardSlice";
+import { setCardShowPop, setShowCard } from "@/Redux/features/productCard/ProductCardSlice";
 import CardProduct from "../CardProduct/CardProduct";
 export default function LogoSearch() {
-  const [showCardPop, setShowCardPop] = useState(false);
   const dispatch = useDispatch();
+  const cardShowPop=useSelector((state)=>state.productCard.cardShowPop);
   useEffect(() => {
     const cardValue = window.localStorage.getItem("cardValue");
     const finalItems = cardValue ? JSON.parse(cardValue) : [];
     dispatch(setShowCard(finalItems));
     window.localStorage.setItem("cardValue", JSON.stringify(finalItems));
+    console.log(cardShowPop)
   }, [dispatch]);
   const card_item = useSelector((state) => state.productCard.cardValue);
+  function onCardClick(){
+    dispatch(setCardShowPop(true));
+    document.body.style.overflow = 'hidden';
+  }
   return (
     <div className={style.wrapper}>
-      {showCardPop ? (
-        <CardProduct card_item={card_item} setShowCardPop={setShowCardPop} />
+      {cardShowPop ? (
+        <CardProduct/>
       ) : (
         ""
       )}
@@ -35,7 +40,7 @@ export default function LogoSearch() {
           </button>
         </div>
         <div className={style.login_wrapper}>
-          <button>
+          <button onClick={onCardClick}>
             <small>{card_item.length}</small>
             <IoCartOutline />
           </button>
