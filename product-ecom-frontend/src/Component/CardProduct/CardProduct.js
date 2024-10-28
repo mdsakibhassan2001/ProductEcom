@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import style from "./css/cardProduct.module.css";
 import { VscChromeClose } from "react-icons/vsc";
 import { useDispatch, useSelector } from "react-redux";
@@ -8,6 +8,9 @@ import { RiIndeterminateCircleLine } from "react-icons/ri";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import Image from "next/image";
 export default function CardProduct() {
+  const [subTotal,setSubTotal]=useState(0)
+  const [grandTotal,setGrandTotal]=useState(0)
+  const [discount,setDiscount]=useState(0)
   const dispatch=useDispatch()
   const card_item = useSelector((state) => state.productCard.cardValue);
   function onCloseClick(){
@@ -24,8 +27,48 @@ export default function CardProduct() {
     dispatch(setShowCard(items))
     window.localStorage.setItem("cardValue", JSON.stringify(items));
  }
+function onOutsiteClick(){
+  dispatch(setCardShowPop(false))
+  document.body.style.overflow = 'auto';
+}
+useEffect(() => {
+  const subTotal = card_item.reduce((sum, item) => sum + item.price, 0);
+  setSubTotal(subTotal);
+  const grandTotal = card_item.reduce((sum, item) => item.offer_price ? sum + item.offer_price : sum + item.price, 0);
+  setGrandTotal(grandTotal);
+  const discount=subTotal-grandTotal;
+  setDiscount(discount)
+}, [card_item]);
+
+function onIncrimentClick(clickItem){
+ const newItems=card_item.map((item)=>{
+  if(clickItem.id==item.id){
+    item={
+      ...item,
+      quantity:clickItem.quantity+1,
+    }
+  }
+  return item;
+ });
+ dispatch(setShowCard(newItems))
+ window.localStorage.setItem("cardValue", JSON.stringify(newItems));
+}
+function onDcrimentClick(clickItem){
+  const newItems=card_item.map((item)=>{
+    if(clickItem.id==item.id && clickItem.quantity>1){
+      item={
+        ...item,
+        quantity:clickItem.quantity-1,
+      }
+    }
+    return item;
+   });
+   dispatch(setShowCard(newItems))
+   window.localStorage.setItem("cardValue", JSON.stringify(newItems));
+}
   return (
-    <div className={style.wrapper}>
+    <>
+     <div onClick={onOutsiteClick} className={style.overlay}></div>
       <div className={style.holder}>
         <div className={style.head_wrapper}>
           <h3>Your Cart</h3>
@@ -45,26 +88,25 @@ export default function CardProduct() {
                   <button onClick={()=>onCardItemDelete(item)}><VscChromeClose /></button>
                 </div>
                 <div className={style.price_wrapper}>
-                  <p><span><FaBangladeshiTakaSign />{item.price}</span><span> <FaBangladeshiTakaSign />{item.offer_price}</span></p>
+                  <p><span className={item.offer_price > 0 ? style.price_holder : ""}><FaBangladeshiTakaSign />{item.price }</span> {item.offer_price>0? <span> <FaBangladeshiTakaSign />{item.offer_price}</span>:""}</p>
                   <div className={style.increment_button}>
-                    <button><RiIndeterminateCircleLine /></button><span>2</span><button><AiOutlinePlusCircle /></button>
+                    <button onClick={()=>onDcrimentClick(item)}><RiIndeterminateCircleLine/></button><span>{item.quantity}</span><button onClick={()=>onIncrimentClick(item)}><AiOutlinePlusCircle /></button>
                 </div>
                 </div>
             </div>
-            
-          </div>
+          </div>     
         })}
         </div>
        <div className={style.footer_wrapper}>
            <div className={style.total_price_wrapper}>
               <div className={style.total_price_holder}>
-                <span>Sub Total</span>-<small><FaBangladeshiTakaSign /> 13410</small>
+                <span>Sub Total</span>-<small><FaBangladeshiTakaSign />{subTotal}</small>
               </div>
               <div className={style.total_price_holder}>
-                <span>Discount</span>-<small><FaBangladeshiTakaSign /> 380</small>
+                <span>Discount</span>-<small><FaBangladeshiTakaSign />{discount}</small>
               </div>
               <div className={style.total_price_holder}>
-                <span>Grand Total</span>-<small><FaBangladeshiTakaSign /> 13030</small>
+                <span>Grand Total</span>-<small><FaBangladeshiTakaSign /> {grandTotal}</small>
               </div>
           </div>
             <div className={style.button_wrapper}>
@@ -74,6 +116,7 @@ export default function CardProduct() {
         </div>
           
       </div>
-    </div>
+   </>
+   
   );
 }

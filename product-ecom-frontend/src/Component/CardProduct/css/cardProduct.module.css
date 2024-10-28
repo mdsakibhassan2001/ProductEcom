@@ -1,16 +1,28 @@
-.wrapper {
+.overlay{
   background-color: var(--modal-bg);
   inset: 0;
   position: absolute;
   z-index: 13;
   height: 100vh;
 }
+
 .holder {
+  overflow: hidden;
   background-color: var(--white);
   width: 400px;
-  right: 0;
-  position: absolute;
+  position: fixed;
   height: 100vh;
+  transition: 1s;
+  z-index: 100;
+  right: 0;
+}
+.hide_holder{
+  left: 420px;
+  transition: 1s;
+}
+.show_holder{
+  right: 0px;
+  transition: 1s;
 }
 .head_wrapper {
   display: flex;
@@ -97,7 +109,7 @@
 .price_wrapper p span svg{
   font-size: 12px;
 }
-.price_wrapper p span:first-child{
+.price_wrapper .price_holder{
   text-decoration: line-through;
   font-weight: 400;
   color: var(--red);

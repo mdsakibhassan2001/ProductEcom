@@ -28,9 +28,14 @@ export default function ProductCard({productItem}) {
               <div className={style.card_body}>
                 
                   <div className={style.title}><small>Just For Baby</small><small className={style.star_icon}><IoStar /><IoStar /><IoStar /><IoStarHalf /><IoStarHalf /></small></div>
-                  <Link href="/">{item.title}</Link>
+                  <Link href="/">{item.title.slice(0,58)}</Link>
                   <div className={style.price_wrapper}>
-                    <span className={style.offer_price}><FaBangladeshiTakaSign />{item.offer_price}</span> <span className={style.price}><FaBangladeshiTakaSign />{item.price} </span><small>{item.offer_percent}% off</small>
+                    {
+                      item.offer_price>0 ? <span className={style.offer_price}><FaBangladeshiTakaSign />{item.offer_price}</span> :""
+                    }
+                 <span  className={item.offer_price > 0 ? style.price: ""}><FaBangladeshiTakaSign />{item.price} </span>
+                 {item.offer_price>0 ?  <small>{item.offer_percent}% off</small>:""}
+                
                   </div>
               </div>
               <div className={style.card_footer}>
