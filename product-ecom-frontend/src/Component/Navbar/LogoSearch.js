@@ -31,7 +31,7 @@ export default function LogoSearch() {
       )}
       <div className={style.holder}>
         <div className={style.logo_wrapper}>
-          <h2>Product Ecom</h2>
+          <h2>btb24</h2>
         </div>
         <div className={style.search_wrapper}>
           <input type="search" placeholder="Enter your search item" />
