@@ -5,7 +5,7 @@ export default function NavbarTop() {
     <div className={style.wrapper}>
         <div className={style.holder}>
             <div className={style.logo_wrapper}>
-                <h2>Product Ecom</h2>
+                <h2>btb24</h2>
             </div>
             <div className={style.search_wrapper}>
                 
