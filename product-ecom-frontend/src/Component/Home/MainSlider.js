@@ -2,9 +2,12 @@
 import React from 'react'
 import Slider from 'react-slick';
 import style from './css/mainSlider.module.css'
-import oil from '../../../public/assets/1710569991103_Olive-Oils-Land.webp'
-import roxanne from '../../../public/assets/Roxanne.webp'
-import cold_care from '../../../public/assets/1710570260155_Gold-Care.webp'
+import slider1 from '../../../public/assets/slider/slider1.webp'
+import slider2 from '../../../public/assets/slider/slider2.webp'
+import slider3 from '../../../public/assets/slider/slider3.webp'
+import slider4 from '../../../public/assets/slider/slider4.webp'
+import slider5 from '../../../public/assets/slider/slider5.webp'
+
 import Image from 'next/image';
 export default function MainSlider() {
   var settings = {
@@ -21,14 +24,21 @@ export default function MainSlider() {
         <div className={style.holder}>
         <Slider {...settings}>
           <div>
-            <Image height="auto" width='100%'  alt='oil' src={oil}/>
+            <Image height="auto" width='100%'  alt='oil' src={slider1}/>
           </div>
           <div>
-            <Image alt='roxanne' height="auto" width='100%' src={roxanne}/>
+            <Image height="auto" width='100%'  alt='oil' src={slider2}/>
           </div>
           <div>
-            <Image alt='cold_care' height="auto" width='100%' src={cold_care}/>
+            <Image height="auto" width='100%'  alt='oil' src={slider3}/>
           </div>
+          <div>
+            <Image height="auto" width='100%'  alt='oil' src={slider4}/>
+          </div>
+          <div>
+            <Image height="auto" width='100%'  alt='oil' src={slider5}/>
+          </div>
+
         </Slider>
         </div>
     </div>

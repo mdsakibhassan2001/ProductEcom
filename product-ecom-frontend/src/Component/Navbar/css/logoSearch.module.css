@@ -7,14 +7,14 @@
 .holder{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    padding: 20px 0;
+    padding: 8px 0;
     width: 90%;
     max-width: 1200px;
     margin: auto;
 }
-.logo_wrapper h2{
-    font-size: 18px;
-    color: var(--dark);
+.logo_wrapper a img{
+   width: 120px;
+   height: auto;
 }
 .search_wrapper{
     display: flex;

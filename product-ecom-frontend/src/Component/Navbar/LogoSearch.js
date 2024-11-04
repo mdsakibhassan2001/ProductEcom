@@ -7,6 +7,9 @@ import { FaCircleUser } from "react-icons/fa6";
 import { useDispatch, useSelector } from "react-redux";
 import { setCardShowPop, setShowCard } from "@/Redux/features/productCard/ProductCardSlice";
 import CardProduct from "../CardProduct/CardProduct";
+import Link from "next/link";
+import Image from "next/image";
+import logo from '../../../public/assets/btb24_logo.png'
 export default function LogoSearch() {
   const dispatch = useDispatch();
   const cardShowPop=useSelector((state)=>state.productCard.cardShowPop);
@@ -31,7 +34,7 @@ export default function LogoSearch() {
       )}
       <div className={style.holder}>
         <div className={style.logo_wrapper}>
-          <h2>btb24</h2>
+          <Link href="/"><Image alt="logo" src={logo}/></Link>
         </div>
         <div className={style.search_wrapper}>
           <input type="search" placeholder="Enter your search item" />
