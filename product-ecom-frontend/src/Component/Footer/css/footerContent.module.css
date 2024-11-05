@@ -25,13 +25,14 @@
 }
 .content_wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   padding-bottom: 30px;
+  gap: 20px;
 }
 .about_wrapper {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 8px;
 }
 .content_wrapper h3 {
   font-size: 20px;
@@ -64,7 +65,7 @@
 .help_wrapper {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 8px;
 }
 .help_wrapper ul {
   padding: 0;
@@ -131,4 +132,21 @@
   border-bottom: 1px solid var(--border-color);
   margin-top: 20px;
   padding: 10px 0;
+}
+.payment_img_wrapper img{
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .content_wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+  .about_wrapper {
+    gap: 16px;
+  }
+  .help_wrapper {
+    gap: 16px;
+  }
 }

@@ -3,16 +3,19 @@ import React, { useEffect, useState } from "react";
 import style from "./css/logoSearch.module.css";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoCartOutline } from "react-icons/io5";
-import { FaCircleUser } from "react-icons/fa6";
+import { FaCircleUser,FaBars } from "react-icons/fa6";
 import { useDispatch, useSelector } from "react-redux";
-import { setCardShowPop, setShowCard } from "@/Redux/features/productCard/ProductCardSlice";
+import { setCardShowPop, setShowCard,setMenuBar } from "@/Redux/features/productCard/ProductCardSlice";
 import CardProduct from "../CardProduct/CardProduct";
 import Link from "next/link";
 import Image from "next/image";
 import logo from '../../../public/assets/btb24_logo.png'
+
 export default function LogoSearch() {
   const dispatch = useDispatch();
   const cardShowPop=useSelector((state)=>state.productCard.cardShowPop);
+  const menuBar=useSelector((state)=>state.productCard.menuBar);
+
   useEffect(() => {
     const cardValue = window.localStorage.getItem("cardValue");
     const finalItems = cardValue ? JSON.parse(cardValue) : [];
@@ -20,11 +23,18 @@ export default function LogoSearch() {
     window.localStorage.setItem("cardValue", JSON.stringify(finalItems));
     console.log(cardShowPop)
   }, [dispatch]);
+
   const card_item = useSelector((state) => state.productCard.cardValue);
+
   function onCardClick(){
     dispatch(setCardShowPop(true));
     document.body.style.overflow = 'hidden';
   }
+
+  function onBarClick(){
+    dispatch(setMenuBar(true));
+  }
+  
   return (
     <div className={style.wrapper}>
       {cardShowPop ? (
@@ -34,15 +44,24 @@ export default function LogoSearch() {
       )}
       <div className={style.holder}>
         <div className={style.logo_wrapper}>
+          <button onClick={onBarClick}><FaBars /></button>
           <Link href="/"><Image alt="logo" src={logo}/></Link>
         </div>
         <div className={style.search_wrapper}>
-          <input type="search" placeholder="Enter your search item" />
+          {
+            menuBar?"":<><input type="search" placeholder="Enter your search item" />
           <button>
             <IoSearchOutline />
-          </button>
+          </button></>
+          }      
         </div>
         <div className={style.login_wrapper}>
+          {
+            menuBar? <button className={style.mobile_search}>
+            <IoSearchOutline />
+          </button>:""
+          }
+         
           <button onClick={onCardClick}>
             <small>{card_item.length}</small>
             <IoCartOutline />

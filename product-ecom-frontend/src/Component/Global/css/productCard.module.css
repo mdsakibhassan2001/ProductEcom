@@ -41,15 +41,15 @@
 }
 .card_body .title .star_icon svg{
     color: var(--theme);
-    font-size: 14px;
+    font-size: 12px;
 }
 .card_body a{
     text-decoration: none;
     color: var(--dark);
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
     transition: 0.5s;
-    height: 60px;
+    height: 50px;
 }
 
 .card_body:hover a{
@@ -64,7 +64,7 @@
 }
 .wishlist{
     flex: 1;
-    padding: 10px;
+    padding: 8px;
     background-color: var(--red);
     border-radius: 0;
     transition: 0.3s;
@@ -90,6 +90,7 @@
     color: var(--dark);
     transition: 0.2s;
     text-transform: uppercase;
+    font-size: 12px;
 }
 .addtobag:hover{
     background-color: var(--theme_dive);
@@ -106,7 +107,7 @@
     font-weight: 300;
     align-items: center;
     display: flex;
-    font-size: 14px;
+    font-size: 12px;
     text-decoration-line: line-through;
 }
 .price_wrapper small{
@@ -124,3 +125,22 @@
     color: var(--dark);
     margin-right: 8px;
 }
+
+
+  @media screen and (min-width: 992px) {
+    .price_wrapper .price{
+        font-size: 14px;
+    }
+    .card_body a{
+        font-size: 16px;
+    }
+    .card_body .title .star_icon svg{
+        font-size: 14px;
+    }
+    .wishlist{
+       padding: 10px;
+    }
+    .addtobag{
+        font-size: 14px;
+    }
+  }

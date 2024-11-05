@@ -12,6 +12,17 @@
     max-width: 1200px;
     margin: auto;
 }
+.logo_wrapper{
+    display: flex;
+    align-items: center;
+}
+.logo_wrapper button{
+    background-color: transparent;
+}
+.logo_wrapper svg{
+    font-size: 25px;
+    color: var(--dark);
+}
 .logo_wrapper a img{
    width: 120px;
    height: auto;
@@ -41,6 +52,13 @@
     align-items: center;
     justify-content: center;
     transition: 0.3s;
+}
+.mobile_search{
+   background-color: transparent !important; 
+}
+.mobile_search svg{
+    font-size: 20px;
+    color: var(--black);
 }
 .search_wrapper button:hover{
     background-color: var(--yellow);
@@ -84,4 +102,7 @@
 .login_wrapper button:hover svg{
     color: var(--theme);
     transition: 0.3s;
+}
+@media screen and (min-width: 992px) {
+ 
 }

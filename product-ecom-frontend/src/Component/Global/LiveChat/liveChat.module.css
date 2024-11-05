@@ -1,0 +1,78 @@
+.wrapper{
+   position: fixed;
+    bottom: 40px;
+    right: 20px;
+}
+
+.link_wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    gap: 10px;
+}
+
+.link_wrapper a{
+    background-color: transparent;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.link_wrapper a svg{
+    font-size: 22px;
+    color:  var(--white);
+}
+.click_link{
+    animation: example 0.5s ease-in-out;
+    z-index: 1;
+}
+.click_link button{
+    background-color: transparent;
+    width: 45px;
+    height: 45px;
+    background-color: var(--theme);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--white);
+}
+.chat{
+    animation: rotated 5s linear infinite;
+}
+.click_link button svg{
+    font-size: 25px;
+    color: var(--white);
+}
+.facebook{
+    background-color: #1E88E5 !important;
+}
+.phone{
+    background-color: #03E78B !important;
+}
+.whatsapp{
+    background-color: #49E670 !important;
+}
+.whatsapp svg{
+    font-size: 30px !important;
+}
+.social_wrapper{
+    animation: example 0.7s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+@keyframes example {
+    0% { transform: translateY(30%); 
+        opacity: 0;
+    }
+    100% { transform: translateY(0%);
+        opacity: 1; }
+}
+@keyframes rotated {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+

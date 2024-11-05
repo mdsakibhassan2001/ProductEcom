@@ -7,6 +7,7 @@ import "./globals.css";
 import store from "@/Redux/store";
 import { Provider } from "react-redux";
 import FooterMain from "@/Component/Footer/FooterMain";
+import LiveChat from "@/Component/Global/LiveChat/LiveChat";
 
 export default function RootLayout({ children }) {
   return (
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
           <NavbarMain />
           {children}
           <FooterMain />
+          <LiveChat/>
         </Provider>
       </body>
     </html>
