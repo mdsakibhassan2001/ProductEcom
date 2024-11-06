@@ -2,7 +2,7 @@
   background-color: var(--modal-bg);
   inset: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 11;
   height: 100vh;
 }
 .wrapper {
@@ -57,5 +57,8 @@
      flex-direction: row;
      justify-content: center;
      align-items: center;
+  }
+  .overlay{
+   display: none;
   }
 }

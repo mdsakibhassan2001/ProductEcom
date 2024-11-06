@@ -3,13 +3,15 @@ import React, { useEffect, useState } from "react";
 import style from "./css/logoSearch.module.css";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoCartOutline } from "react-icons/io5";
+import { MdClose } from "react-icons/md";
 import { FaCircleUser,FaBars } from "react-icons/fa6";
 import { useDispatch, useSelector } from "react-redux";
 import { setCardShowPop, setShowCard,setMenuBar } from "@/Redux/features/productCard/ProductCardSlice";
 import CardProduct from "../CardProduct/CardProduct";
 import Link from "next/link";
 import Image from "next/image";
-import logo from '../../../public/assets/btb24_logo.png'
+import logo from '../../../public/assets/logo.png'
+
 
 export default function LogoSearch() {
   const dispatch = useDispatch();
@@ -34,6 +36,9 @@ export default function LogoSearch() {
   function onBarClick(){
     dispatch(setMenuBar(true));
   }
+  function onCloseClick(){
+    dispatch(setMenuBar(false));
+  }
   
   return (
     <div className={style.wrapper}>
@@ -43,25 +48,25 @@ export default function LogoSearch() {
         ""
       )}
       <div className={style.holder}>
+        <div className={style.bar_wrapper}>
+         {
+            menuBar?<button className={style.colse_click} onClick={onCloseClick}><MdClose /></button>: <button onClick={onBarClick}><FaBars /></button>
+          }
+        </div>
         <div className={style.logo_wrapper}>
-          <button onClick={onBarClick}><FaBars /></button>
+         
           <Link href="/"><Image alt="logo" src={logo}/></Link>
         </div>
         <div className={style.search_wrapper}>
-          {
-            menuBar?"":<><input type="search" placeholder="Enter your search item" />
+         <input type="search" placeholder="Enter your search item" />
           <button>
             <IoSearchOutline />
-          </button></>
-          }      
+          </button>   
         </div>
         <div className={style.login_wrapper}>
-          {
-            menuBar? <button className={style.mobile_search}>
+          <button className={style.mobile_search}>
             <IoSearchOutline />
-          </button>:""
-          }
-         
+          </button>
           <button onClick={onCardClick}>
             <small>{card_item.length}</small>
             <IoCartOutline />
