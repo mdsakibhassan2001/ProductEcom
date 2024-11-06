@@ -2,10 +2,9 @@
   background-color: var(--modal-bg);
   inset: 0;
   position: absolute;
-  z-index: 13;
+  z-index: 999;
   height: 100vh;
 }
-
 .holder {
   overflow: hidden;
   background-color: var(--white);
@@ -13,7 +12,7 @@
   position: fixed;
   height: 100vh;
   transition: 1s;
-  z-index: 100;
+  z-index: 1000;
   right: 0;
 }
 .hide_holder{

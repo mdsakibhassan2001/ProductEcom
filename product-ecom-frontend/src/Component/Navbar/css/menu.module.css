@@ -1,9 +1,17 @@
+.overlay{
+  background-color: var(--modal-bg);
+  inset: 0;
+  position: fixed;
+  z-index: 1;
+  height: 100vh;
+}
 .wrapper {
   background-color: var(--white);
-  position: sticky;
+  position: fixed;
   z-index: 11;
   top: 98px;
-  z-index: 12;
+  width: 50%;
+  height: 100vh;
 }
 .holder {
   width: 90%;
@@ -38,8 +46,13 @@
 @media screen and (min-width: 992px) {
   .wrapper {
     background-color: var(--theme);
+    position: sticky;
+    z-index: 11;
+    top: 98px;
+    z-index: 12;
+    width: 100%;
+    height: auto;
   }
-
   .holder ul {
      flex-direction: row;
      justify-content: center;

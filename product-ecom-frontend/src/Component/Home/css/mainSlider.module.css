@@ -3,7 +3,7 @@
 }
 .holder button:first-child{
     left: 30px;
-    z-index: 11 ;
+    z-index: 10 ;
     top: 48%;
 }
 .holder button::before{
@@ -12,7 +12,7 @@
 }
 .holder button:nth-child(3){
     right: 30px;
-    z-index: 11 ;
+    z-index: 10 ;
     top: 48%;
 }
 .holder img{

@@ -12,7 +12,10 @@ export default function Menu() {
     {name:"Printing",link:""},
   ]
   return (
+    <>
+     <div  className={style.overlay}></div>
     <div className={style.wrapper}>
+
         <div className={style.holder}>
             <ul>
               {
@@ -23,5 +26,8 @@ export default function Menu() {
             </ul>
         </div>
     </div>
+    
+    </>
+    
   )
 }
