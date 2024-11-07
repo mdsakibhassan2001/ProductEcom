@@ -1,5 +1,5 @@
 import React from 'react'
-import style from './css/navbarTop.module'
+import style from './css/navbarTop'
 export default function NavbarTop() {
   return (
     <div className={style.wrapper}>

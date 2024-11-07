@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import style from "./css/logoSearch.module.css";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoCartOutline } from "react-icons/io5";
@@ -9,8 +9,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { setCardShowPop, setShowCard,setMenuBar } from "@/Redux/features/productCard/ProductCardSlice";
 import CardProduct from "../CardProduct/CardProduct";
 import Link from "next/link";
-import Image from "next/image";
-import logo from '../../../public/assets/logo.png'
 
 
 export default function LogoSearch() {
@@ -55,7 +53,7 @@ export default function LogoSearch() {
         </div>
         <div className={style.logo_wrapper}>
          
-          <Link href="/"><Image alt="logo" src={logo}/></Link>
+          <Link href="/">BTOB</Link>
         </div>
         <div className={style.search_wrapper}>
          <input type="search" placeholder="Enter your search item" />

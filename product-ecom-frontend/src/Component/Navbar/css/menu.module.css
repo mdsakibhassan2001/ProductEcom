@@ -9,9 +9,10 @@
   background-color: var(--white);
   position: fixed;
   z-index: 11;
-  top: 98px;
+  top: 70px;
   width: 50%;
   height: 100vh;
+  transition: 0.5s;
 }
 .holder {
   width: 90%;
@@ -42,16 +43,22 @@
   color: var(--dark);
   transition: 0.3s;
 }
-
+.show_mobile_menu{
+  left: 0%;
+  transition: 0.5s;
+}
+.hide_mobile_menu{
+  left: -100%;
+  transition: 0.5s;
+}
 @media screen and (min-width: 992px) {
   .wrapper {
-    background-color: var(--theme);
+    background-color: var(--theme) !important;
     position: sticky;
-    z-index: 11;
-    top: 98px;
-    z-index: 12;
-    width: 100%;
-    height: auto;
+    z-index: 11 !important;
+    top: 84px !important;
+    width: 100% !important;
+    height: auto !important;
   }
   .holder ul {
      flex-direction: row;
@@ -61,4 +68,5 @@
   .overlay{
    display: none;
   }
+
 }

@@ -1,5 +1,5 @@
 .wrapper {
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 .holder {
   max-width: 1200px;
@@ -34,6 +34,9 @@
 }
 
 @media screen and (min-width: 992px) {
+  .wrapper {
+    padding-bottom: 30px;
+  }
   .holder {
     grid-template-columns: 2fr 1fr;
   }

@@ -19,9 +19,11 @@ export default function Menu() {
     dispatch(setMenuBar(false));
   }
   return (
-      menuBar&& <>
-        <div onClick={onVoderlayClick} className={style.overlay}></div>
-        <div className={style.wrapper}>
+      <>
+        {
+           menuBar&& <div onClick={onVoderlayClick} className={style.overlay}></div>
+        }
+        <div className={menuBar ? `${style.show_mobile_menu} ${style.wrapper}` : `${style.hide_mobile_menu} ${style.wrapper}`}>
             <div className={style.holder}>
                 <ul>
                   {
