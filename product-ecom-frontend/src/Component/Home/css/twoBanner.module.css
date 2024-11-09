@@ -1,11 +1,11 @@
 .wrapper {
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 .holder {
   max-width: 1200px;
   width: 90%;
   margin: auto;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   display: grid;
   gap: 20px;
   overflow: hidden;
@@ -31,4 +31,13 @@
   transition: 0.3s;
   box-shadow: var(--theme) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   transform: scale(0.95);
+}
+
+@media screen and (min-width: 992px) {
+  .wrapper {
+    padding-bottom: 30px;
+  }
+  .holder {
+    grid-template-columns: 2fr 1fr;
+  }
 }

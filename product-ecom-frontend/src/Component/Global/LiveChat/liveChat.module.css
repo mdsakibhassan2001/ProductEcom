@@ -1,0 +1,113 @@
+.wrapper{
+    position: fixed;
+     bottom: 40px;
+     right: 40px;
+     margin-left: 20px;
+ }
+ 
+ .link_wrapper{
+     display: flex;
+     flex-direction: column;
+     width: 50px;
+     gap: 10px;
+     position: relative;   
+ }
+ 
+ .link_wrapper a{
+     background-color: transparent;
+     width: 45px;
+     height: 45px;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ .link_wrapper a svg{
+     font-size: 22px;
+     color:  var(--white);
+ }
+ .click_link{
+     --size:45px;
+     width: var(--size);
+     aspect-ratio: 1;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     animation: example 0.5s ease-in-out;
+     z-index: 1;
+     background-color: var(--white);
+     border-radius: 50%;
+     cursor: pointer;
+ }
+ .click_link button{
+     background-color: transparent;
+     width: var(--size);
+     height: var(--size);
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border: 2px solid var(--theme);
+     cursor: pointer;
+ }
+ .chat_now{
+     position: absolute;
+     left: -90px;
+     top: 25%;
+     color: var(--white);
+     background-color: var(--theme);
+     padding: 4px 8px;
+     border-radius: 10px 35px 35px 10px;
+     font-size: 1rem;
+     cursor: pointer;
+ }
+ 
+ .chat{
+     animation: rotated 5s linear infinite;
+     color: var(--theme);
+ }
+ .click_link button svg{
+     font-size: 25px;
+     color: var(--theme);
+ }
+ .facebook{
+     background-color: #1E88E5 !important;
+ }
+ .phone{
+     background-color: #03E78B !important;
+ }
+ .whatsapp{
+     background-color: #49E670 !important;
+ }
+ .whatsapp svg{
+     font-size: 30px !important;
+ }
+ .social_wrapper{
+     animation: example 0.5s ease-in-out;
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+ }
+ @keyframes rotated {
+     0% { transform: rotate(0deg); 
+     }
+     100% { transform: rotate(360deg);
+         }
+ }
+ @keyframes example {
+     0% { transform: translateY(30%); 
+         opacity: 0;
+     }
+     100% { transform: translateY(0%);
+         opacity: 1; }
+ }
+ @keyframes example1 {
+   
+     0% { transform: translateY(0%); 
+         opacity: 0;
+     }
+     100% { transform: translateY(30%);
+         opacity: 1; }
+ }
+ 
+ 

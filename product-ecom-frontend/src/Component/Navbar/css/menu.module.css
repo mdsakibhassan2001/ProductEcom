@@ -1,8 +1,18 @@
-.wrapper {
-  background-color: var(--theme);
-  position: sticky;
+.overlay{
+  background-color: var(--modal-bg);
+  inset: 0;
+  position: fixed;
   z-index: 11;
-  top: 98px;
+  height: 100vh;
+}
+.wrapper {
+  background-color: var(--white);
+  position: fixed;
+  z-index: 11;
+  top: 70px;
+  width: 50%;
+  height: 100vh;
+  transition: 0.5s;
 }
 .holder {
   width: 90%;
@@ -15,8 +25,8 @@
   padding: 0;
   margin: 0;
   gap: 20px;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+ 
 }
 .holder ul li {
   list-style: none;
@@ -32,4 +42,31 @@
 .holder ul li:hover a {
   color: var(--dark);
   transition: 0.3s;
+}
+.show_mobile_menu{
+  left: 0%;
+  transition: 0.5s;
+}
+.hide_mobile_menu{
+  left: -100%;
+  transition: 0.5s;
+}
+@media screen and (min-width: 992px) {
+  .wrapper {
+    background-color: var(--theme) !important;
+    position: sticky;
+    z-index: 11 !important;
+    top: 84px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+  .holder ul {
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+  }
+  .overlay{
+   display: none;
+  }
+
 }
