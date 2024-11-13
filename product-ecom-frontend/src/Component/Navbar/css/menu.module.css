@@ -10,7 +10,7 @@
   position: fixed;
   z-index: 11;
   top: 70px;
-  width: 50%;
+  width: 65%;
   height: 100vh;
   transition: 0.5s;
 }
