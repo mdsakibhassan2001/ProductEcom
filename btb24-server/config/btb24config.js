@@ -5,11 +5,11 @@ const db = mysql.createPool({
   host: "localhost",
   user: "root",
   password: "sakib@590",
-  database: "anayase_blog",
+  database: "btb24",
   port: 3306,
 });
 db.getConnection(() => {
-  console.log("Anayse db is connecte");
+  console.log("BTB Data Base is connecte");
 });
 
 module.exports = db;
