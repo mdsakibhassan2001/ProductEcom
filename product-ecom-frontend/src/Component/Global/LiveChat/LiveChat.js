@@ -16,8 +16,8 @@ export default function LiveChat() {
     setClose(true);
   }
   const messengerLink = `https://m.me/102107241999516`;
-  const whatsappLink = `https://wa.me/+8801810169101`;
-  const contactNumber = `tel:+8801810169101`;
+  const whatsappLink = `https://wa.me/+8801771707097`;
+  const contactNumber = `tel:+8801771707097`;
   return (
     <div className={style.wrapper}>
       <div className={style.holder}>

@@ -64,7 +64,7 @@
 }
 .wishlist{
     flex: 1;
-    padding: 8px;
+    padding: 10px;
     background-color: var(--red);
     border-radius: 0;
     transition: 0.3s;
@@ -82,6 +82,7 @@
 }
 .wishlist svg{
     color: var(--white);
+    font-size: 18px;
 }
 .addtobag{
     flex: 4;
@@ -90,7 +91,8 @@
     color: var(--dark);
     transition: 0.2s;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 14px;
+    padding: 10;
 }
 .addtobag:hover{
     background-color: var(--theme_dive);
