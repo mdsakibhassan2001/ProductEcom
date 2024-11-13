@@ -1,4 +1,4 @@
-.overlay{
+.overlay {
   background-color: var(--modal-bg);
   inset: 0;
   position: fixed;
@@ -26,7 +26,6 @@
   margin: 0;
   gap: 20px;
   flex-direction: column;
- 
 }
 .holder ul li {
   list-style: none;
@@ -43,11 +42,11 @@
   color: var(--dark);
   transition: 0.3s;
 }
-.show_mobile_menu{
+.show_mobile_menu {
   left: 0%;
   transition: 0.5s;
 }
-.hide_mobile_menu{
+.hide_mobile_menu {
   left: -100%;
   transition: 0.5s;
 }
@@ -56,17 +55,16 @@
     background-color: var(--theme) !important;
     position: sticky;
     z-index: 11 !important;
-    top: 84px !important;
+    top: 80px !important;
     width: 100% !important;
     height: auto !important;
   }
   .holder ul {
-     flex-direction: row;
-     justify-content: center;
-     align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
-  .overlay{
-   display: none;
+  .overlay {
+    display: none;
   }
-
 }
