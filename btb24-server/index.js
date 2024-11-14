@@ -12,4 +12,4 @@ app.get("/", (req, res) => {
 
 const CategoryNameRoute = require("./router/CategoryNameRoute");
 
-app.use("/category-name", CategoryNameRoute);
+// app.use("/category-name", CategoryNameRoute);
