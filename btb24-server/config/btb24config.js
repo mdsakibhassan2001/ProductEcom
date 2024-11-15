@@ -8,8 +8,12 @@ const db = mysql.createPool({
   database: "btb24",
   port: 3306,
 });
-db.getConnection(() => {
-  console.log("BTB Data Base is connecte");
+db.getConnection((err,connection) => {
+  if(connection){
+    console.log("BTB Data Base is connecte");
+  }else{
+    console.log("BTB Data Base is Not connecte");
+  }
 });
 
 module.exports = db;
