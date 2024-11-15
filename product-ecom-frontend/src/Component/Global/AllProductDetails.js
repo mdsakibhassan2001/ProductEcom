@@ -3,55 +3,55 @@ const productDetails = [
     fashion: [
       {
         name: "Linen Screen Print Fashionable Long Gown For Women - Black - G-N05",
-        image: "assets/fashion/PHOTO-2024-11-15-08-51-26.jpg",
+        image: "/assets/fashion/PHOTO-2024-11-15-08-51-26.jpg",
         price: "2000",
         discount_price: "1500",
       },
       {
         name: "Linen Screen Print Fashionable Long Gown For Women - White - G-N08",
-        image: "assets/fashion/PHOTO-2024-11-15-08-52-56.jpg",
+        image: "/assets/fashion/PHOTO-2024-11-15-08-52-56.jpg",
         price: "2000",
         discount_price: "1500",
       },
       {
         name: "Linen Screen Print Fashionable Long low - G-N03Gown For Women - Yel",
-        image: "assets/fashion/PHOTO-2024-11-15-08-53-56.jpg",
+        image: "/assets/fashion/PHOTO-2024-11-15-08-53-56.jpg",
         price: "2000",
         discount_price: "1500",
       },
       {
         name: "Georgette Double Shrug For Women - Maroon",
-        image: "assets/fashion/PHOTO-2024-11-15-08-54-53.jpg",
+        image: "/assets/fashion/PHOTO-2024-11-15-08-54-53.jpg",
         price: "2000",
         discount_price: "1500",
       },
       {
         name: "Georgette Double Shrug For Women - Light Mauve",
-        image: "assets/fashion/PHOTO-2024-11-15-08-55-59.jpg",
+        image: "/assets/fashion/PHOTO-2024-11-15-08-55-59.jpg",
         price: "2000",
         discount_price: "1500",
       },
       {
         name: "Half Silk Hand Print Sharee For Women - Purple",
-        image: "assets/fashion/PHOTO-2024-11-15-08-59-26.jpg",
+        image: "/assets/fashion/PHOTO-2024-11-15-08-59-26.jpg",
         price: "1290",
         discount_price: "944",
       },
       {
         name: "Hand Print Couple Set Saree With Panjabi - Blue - CS-75",
-        image: "assets/fashion/PHOTO-2024-11-15-08-59-26.jpg",
+        image: "/assets/fashion/PHOTO-2024-11-15-08-59-26.jpg",
         price: "2150",
         discount_price: "1243",
       },
       {
         name: "Hand Print Couple Set Saree With Panjabi - White And Green - CS-65",
-        image: "assets/fashion/PHOTO-2024-11-15-09-00-41.jpg",
+        image: "/assets/fashion/PHOTO-2024-11-15-09-00-41.jpg",
         price: "2150",
         discount_price: "1243",
       },
       {
         name: "Full Sleeve Premium Hoodie for Men Sweatshirt ",
-        image: "assets/fashion/PHOTO-2024-11-15-09-05-07.jpg",
+        image: "/assets/fashion/PHOTO-2024-11-15-09-05-07.jpg",
         price: "850",
         discount_price: "380",
       },
@@ -340,3 +340,4 @@ const productDetails = [
     ],
   },
 ];
+export default productDetails;
