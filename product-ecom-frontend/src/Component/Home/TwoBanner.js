@@ -9,10 +9,10 @@ export default function TwoBanner() {
     <div className={style.wrapper}>
       <div className={style.holder}>
         <Link href="/" className={style.image_wrapper}>
-          <Image src={oil_banner} alt="#" />
+          <Image fill src="/assets/battery/PHOTO-2024-11-14-22-58-19.jpg" alt="#" />
         </Link>
         <Link href="/" className={style.image_wrapper}>
-          <Image src={shoe_care} alt="#" />
+          <Image fill src="/assets/electric_tricycle/PHOTO-2024-11-14-22-56-56.jpg" alt="#" />
         </Link>
       </div>
     </div>

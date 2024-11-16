@@ -8,9 +8,9 @@ export default function HomeMain() {
   return (
     <>
         <MainSlider/>
-        <Category/>
-        <BestSellingProduct/>
-        <TwoBanner/>
+        {/* <Category/> */}
+        {/* <BestSellingProduct/> */}
+        {/* <TwoBanner/> */}
     </>
   )
 }

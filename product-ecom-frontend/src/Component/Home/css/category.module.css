@@ -37,6 +37,7 @@
   color: var(--theme);
   transform: scale(1.1);
   transition: 0.3s;
+
 }
 .card span {
   font-weight: 700;
@@ -44,6 +45,12 @@
   transition: 0.3s;
   text-transform: uppercase;
   font-size: 12px;
+  margin-top: 5px;
+}
+.image_wrapper{
+  aspect-ratio: 1;
+  position: relative;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .holder {
