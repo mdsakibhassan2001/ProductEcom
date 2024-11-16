@@ -42,8 +42,8 @@ export default function CardProduct() {
     setSubTotal(subTotal);
     const grandTotal = card_item.reduce(
       (sum, item) =>
-        item.offer_price
-          ? sum + item.offer_price * item.quantity
+        item.discount_price
+          ? sum + item.discount_price * item.quantity
           : sum + item.price * item.quantity,
       0
     );
@@ -93,11 +93,11 @@ export default function CardProduct() {
             return (
               <div key={index} className={style.item_wrapper}>
                 <div className={style.image_wrapper}>
-                  <Image src={item.image} />
+                  <Image fill src={item.image} />
                 </div>
                 <div className={style.text_wrapper}>
                   <div className={style.title_wrapper}>
-                    <p>{item.title}</p>
+                    <p>{item.name}</p>
                     <button onClick={() => onCardItemDelete(item)}>
                       <VscChromeClose />
                     </button>
@@ -106,17 +106,17 @@ export default function CardProduct() {
                     <p>
                       <span
                         className={
-                          item.offer_price > 0 ? style.price_holder : ""
+                          item.discount_price > 0 ? style.price_holder : ""
                         }
                       >
                         <FaBangladeshiTakaSign />
                         {item.price}
                       </span>{" "}
-                      {item.offer_price > 0 ? (
+                      {item.discount_price > 0 ? (
                         <span>
                           {" "}
                           <FaBangladeshiTakaSign />
-                          {item.offer_price}
+                          {item.discount_price}
                         </span>
                       ) : (
                         ""
