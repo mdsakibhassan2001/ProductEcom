@@ -10,11 +10,11 @@ import Image from "next/image";
 import Link from "next/link";
 export default function Category() {
   const categoryItem = [
-    { img: face, title: "Face" },
-    { img: hair_care, title: "Hair Care Oil" },
-    { img: perfume, title: "Perfume" },
-    { img: nail, title: "Nail Care" },
-    { img: Eye_Makeup, title: "Eye Makeup" },
+    { img: face, title: "Mobiles" },
+    { img: hair_care, title: "Fashion" },
+    { img: perfume, title: "Electronic" },
+    { img: nail, title: "Grocery" },
+    { img: Eye_Makeup, title: "Industrial Machinery" },
     { img: shoe_care, title: "Shoe Care" },
   ];
   return (

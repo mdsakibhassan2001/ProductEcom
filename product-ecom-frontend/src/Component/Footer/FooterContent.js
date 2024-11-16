@@ -21,7 +21,7 @@ export default function FooterContent() {
       <div className={style.holder}>
         <div className={style.content_wrapper}>
           <div className={style.logo_wrapper}>
-            <h2>Product Ecom</h2>
+            <h2>BTOB</h2>
             <div className={style.social_icon_wapper}>
               <BsFacebook />
               <FaYoutube />
