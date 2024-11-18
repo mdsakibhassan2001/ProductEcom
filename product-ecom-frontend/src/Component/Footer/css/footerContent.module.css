@@ -1,4 +1,5 @@
 .wrapper {
+  background-color: var(--light);
 }
 .holder {
   max-width: 1200px;
@@ -133,7 +134,7 @@
   margin-top: 20px;
   padding: 10px 0;
 }
-.payment_img_wrapper img{
+.payment_img_wrapper img {
   width: 100%;
   height: auto;
 }

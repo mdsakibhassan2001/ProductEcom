@@ -55,7 +55,7 @@ export default function ProductCard({ all_product }) {
                 ) : (
                   ""
                 )}
-                <span className={item.offer_price > 0 ? style.price : ""}>
+                <span className={item.discount_price > 0 ? style.price : ""}>
                   <FaBangladeshiTakaSign />
                   {item.price}{" "}
                 </span>

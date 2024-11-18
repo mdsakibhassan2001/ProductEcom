@@ -1,5 +1,5 @@
 .wrapper {
-  background-color: var(--white);
+  background-color: var(--light);
 }
 .holder {
   display: grid;
@@ -37,7 +37,6 @@
   color: var(--theme);
   transform: scale(1.1);
   transition: 0.3s;
-
 }
 .card span {
   font-weight: 700;
@@ -47,7 +46,7 @@
   font-size: 12px;
   margin-top: 5px;
 }
-.image_wrapper{
+.image_wrapper {
   aspect-ratio: 1;
   position: relative;
   width: 100%;
