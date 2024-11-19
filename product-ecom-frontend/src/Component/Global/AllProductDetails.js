@@ -1,3 +1,4 @@
+
 const productDetails = [
   {
     fashion: [
@@ -317,7 +318,7 @@ const productDetails = [
     battery: [
       {
         name: "Kinyear Battery",
-        image: "assets/battery/PHOTO-2024-11-14-22-58-19.jpg",
+        image: "/assets/battery/PHOTO-2024-11-14-22-58-19.jpg",
         price: "16000",
         discount_price: "12000",
       },
@@ -325,7 +326,7 @@ const productDetails = [
     electric_tricycle: [
       {
         name: "Electric Tricycle",
-        image: "assets/electric_tricycle/PHOTO-2024-11-14-22-56-56",
+        image: "/assets/electric_tricycle/PHOTO-2024-11-14-22-56-56.jpg",
         price: "160000",
         discount_price: "150000",
       },
@@ -333,7 +334,7 @@ const productDetails = [
     electronics: [
       {
         name: "Lenovo 60.96 cm (24 inch) Full HD VA Panel with 300 nits brightness, 95% sRGB Gaming Monitor",
-        image: "assets/electronic/PHOTO-2024-11-14-22-53-11.jpg",
+        image: "/assets/electronic/PHOTO-2024-11-14-22-53-11.jpg",
         price: "50000",
         discount_price: "45000",
       },

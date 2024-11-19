@@ -1,3 +1,4 @@
+
 "use client";
 import React, { useEffect } from "react";
 import style from "./css/productCard.module.css";

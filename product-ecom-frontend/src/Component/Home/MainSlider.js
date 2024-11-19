@@ -2,16 +2,22 @@
 import React from 'react'
 import Slider from 'react-slick';
 import style from './css/mainSlider.module.css'
-import slider1 from '../../../public/assets/slider/slider1.webp'
-import slider2 from '../../../public/assets/slider/slider2.webp'
-import slider3 from '../../../public/assets/slider/slider3.webp'
-import slider4 from '../../../public/assets/slider/slider4.webp'
-import slider5 from '../../../public/assets/slider/slider5.webp'
-
 import Image from 'next/image';
 export default function MainSlider() {
+  const mainSliderContent=[
+    {img:"/assets/slider/slider1.jpg"},
+    {img:"/assets/slider/slider2.jpg"},
+    {img:"/assets/slider/slider3.jpg"},
+    {img:"/assets/slider/slider4.jpg"},
+    {img:"/assets/slider/slider5.jpg"},
+    {img:"/assets/slider/slider6.jpg"},
+    {img:"/assets/slider/slider7.jpg"},
+    {img:"/assets/slider/slider8.jpg"},
+    {img:"/assets/slider/slider9.jpg"},
+    {img:"/assets/slider/slider10.jpg"},
+  ]
   var settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     autoplay: true,
     speed: 500,
@@ -23,22 +29,14 @@ export default function MainSlider() {
     <div className={style.wrapper}>
         <div className={style.holder}>
         <Slider {...settings}>
-          <div>
-            <Image height="auto" width='100%'  alt='oil' src={slider1}/>
-          </div>
-          <div>
-            <Image height="auto" width='100%'  alt='oil' src={slider2}/>
-          </div>
-          <div>
-            <Image height="auto" width='100%'  alt='oil' src={slider3}/>
-          </div>
-          <div>
-            <Image height="auto" width='100%'  alt='oil' src={slider4}/>
-          </div>
-          <div>
-            <Image height="auto" width='100%'  alt='oil' src={slider5}/>
-          </div>
-
+          {
+            mainSliderContent.map((item,index)=>{
+             return <div key={index} className={style.image_wrapper}>
+                  <Image fill  alt='oil' src={item.img}/>
+              </div>
+            })
+          }
+         
         </Slider>
         </div>
     </div>

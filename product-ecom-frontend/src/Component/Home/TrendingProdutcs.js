@@ -4,20 +4,19 @@ import style from "./css/bestSellingProduct.module.css";
 import ProductCard from "../Global/ProductCard";
 import AllProductDetails from "../Global/AllProductDetails";
 export default function TrendingProdutcs() {
-  const [bestSelPro, setBestSelPor] = useState([]);
-  useEffect(() => {
-    AllProductDetails.map((item) => {
-      console.log(item);
-    });
-  }, []);
-
+  const allProducts = AllProductDetails.flatMap((categoryObj) =>
+    Object.values(categoryObj).flat()
+  )
+  function shuffleArray(array) {
+    return array.sort(() => Math.random() - 0.5);
+  }
+  const shuffledProducts = shuffleArray(allProducts);
+  const trandingProduct = shuffledProducts.slice(0, 20);
   return (
     <div className={style.wrapper}>
-      <h2>Trending Product</h2>
+      <h2>Trending Produtcs</h2>
       <div className={style.holder}>
-        {AllProductDetails.map((all_product, index) => {
-          return <ProductCard key={index} all_product={all_product.watch} />;
-        })}
+        <ProductCard all_product={trandingProduct} />;
       </div>
     </div>
   );

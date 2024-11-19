@@ -1,3 +1,4 @@
+
 .card:hover img {
   transform: scale(1.1);
   transition: 0.3s;
@@ -16,6 +17,7 @@
 .image_wrapper {
   aspect-ratio: 1;
   position: relative;
+  overflow: hidden;
 }
 .card_body {
   padding: 8px;
