@@ -93,7 +93,7 @@ export default function CardProduct() {
             return (
               <div key={index} className={style.item_wrapper}>
                 <div className={style.image_wrapper}>
-                  <Image fill src={item.image} />
+                  <Image alt={item.name} fill src={item.image} />
                 </div>
                 <div className={style.text_wrapper}>
                   <div className={style.title_wrapper}>

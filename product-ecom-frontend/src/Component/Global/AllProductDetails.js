@@ -3,54 +3,63 @@ const productDetails = [
   {
     fashion: [
       {
+        id:1,
         name: "Linen Screen Print Fashionable Long Gown For Women - Black - G-N05",
         image: "/assets/fashion/PHOTO-2024-11-15-08-51-26.jpg",
         price: "2000",
         discount_price: "1500",
       },
       {
+        id:2,
         name: "Linen Screen Print Fashionable Long Gown For Women - White - G-N08",
         image: "/assets/fashion/PHOTO-2024-11-15-08-52-56.jpg",
         price: "2000",
         discount_price: "1500",
       },
       {
+        id:3,
         name: "Linen Screen Print Fashionable Long low - G-N03Gown For Women - Yel",
         image: "/assets/fashion/PHOTO-2024-11-15-08-53-56.jpg",
         price: "2000",
         discount_price: "1500",
       },
       {
+        id:4,
         name: "Georgette Double Shrug For Women - Maroon",
         image: "/assets/fashion/PHOTO-2024-11-15-08-54-53.jpg",
         price: "2000",
         discount_price: "1500",
       },
       {
+        id:5,
         name: "Georgette Double Shrug For Women - Light Mauve",
         image: "/assets/fashion/PHOTO-2024-11-15-08-55-59.jpg",
         price: "2000",
         discount_price: "1500",
       },
       {
+        id:6,
         name: "Half Silk Hand Print Sharee For Women - Purple",
         image: "/assets/fashion/PHOTO-2024-11-15-08-59-26.jpg",
         price: "1290",
         discount_price: "944",
       },
       {
+        id:7,
         name: "Hand Print Couple Set Saree With Panjabi - Blue - CS-75",
         image: "/assets/fashion/PHOTO-2024-11-15-08-59-26.jpg",
         price: "2150",
         discount_price: "1243",
       },
       {
+        id:8,
         name: "Hand Print Couple Set Saree With Panjabi - White And Green - CS-65",
         image: "/assets/fashion/PHOTO-2024-11-15-09-00-41.jpg",
         price: "2150",
         discount_price: "1243",
       },
       {
+        id:9,
         name: "Full Sleeve Premium Hoodie for Men Sweatshirt ",
         image: "/assets/fashion/PHOTO-2024-11-15-09-05-07.jpg",
         price: "850",
@@ -59,6 +68,7 @@ const productDetails = [
     ],
     mobiles: [
       {
+        id:10,
         name: "Geo R11 Feature Phone",
         image: "/assets/phone/PHOTO-2024-11-14-22-03-26.jpg",
         price: "2700",
@@ -84,6 +94,7 @@ const productDetails = [
                     Ultra Slim 8.9mm, FPC Antenna with Strong Signal, Phonebook Memory 1000 contacts.`,
       },
       {
+        id:11,
         name: "Geo R25 Feature Phone - Green",
         image: "/assets/phone/PHOTO-2024-11-14-22-04-47.jpg",
         price: "2390",
@@ -109,6 +120,7 @@ const productDetails = [
         Stay connected effortlessly with its intuitive interface. With e-commerce integration, shop conveniently on the go. Embrace the ease of use and reliability of our feature phone for all your communication needs.`,
       },
       {
+        id:12,
         name: "Smile M100Leo Dual Sim Feature Phone",
         image: "/assets/phone/PHOTO-2024-11-14-22-06-00.jpg",
         price: "1050",
@@ -134,30 +146,35 @@ const productDetails = [
         Stay connected effortlessly with its intuitive interface. With e-commerce integration, shop conveniently on the go. Embrace the ease of use and reliability of our feature phone for all your communication needs.`,
       },
       {
+        id:13,
         name: "Jio J15 Max Dual SIM Feature Phone",
         image: "/assets/phone/PHOTO-2024-11-14-22-07-12.jpg",
         price: "1400",
         discount_price: "1102",
       },
       {
+        id:14,
         name: "Smile Q9 Victory Smartphone - 3GB RAM - 32GB ROM - 13MP Camera - 6.6 Inch Display",
         image: "/assets/phone/PHOTO-2024-11-14-22-20-48.jpg",
         price: "4499",
         discount_price: "3195",
       },
       {
+        id:15,
         name: "Vfone 10 Prime Smartphone - 6.3 Inch HD Display - 3GB RAM- 32GB ROM- 13MP Camera - Blue",
         image: "/assets/phone/PHOTO-2024-11-14-22-22-19.jpg",
         price: "9990",
         discount_price: "4990",
       },
       {
+        id:16,
         name: "ZTE Blade V50 Design Smartphone - 8GB Ram - 256GB Rom - 13MP Camera - 6.6 Inch Display",
         image: "/assets/phone/PHOTO-2024-11-14-22-26-17.jpg",
         price: "15499",
         discount_price: "12999",
       },
       {
+        id:17,
         name: "ZTE Nubia Neo Smartphone - 8GB Ram - 256GB Rom - 50MP Camera - 6.6 Inch Display",
         image: "/assets/phone/PHOTO-2024-11-14-22-28-11.jpg",
         price: "21499",
@@ -166,6 +183,7 @@ const productDetails = [
     ],
     watch: [
       {
+        id:18,
         name: "Colmi C8 Max Nylon Mesh Touch Screen Smart Watch - Multicolor",
         image: "/assets/watch/PHOTO-2024-11-14-20-52-40.jpg",
         price: "5000",
@@ -199,6 +217,7 @@ const productDetails = [
           The watch is also water-resistant up to IP68, making it suitable for everyday use and light swimming.`,
       },
       {
+        id:19,
         name: "Lige 411 Stainless Steel Touch Screen Sport Fitness Watche For Android iOS - Black",
         image: "/assets/watch/PHOTO-2024-11-14-20-54-47.jpg",
         price: "5000",
@@ -233,18 +252,21 @@ const productDetails = [
                     the Lige 411 Stainless Steel Touch Screen Sport Fitness Watch in Black is a reliable companion for your active lifestyle and everyday use.`,
       },
       {
+        id:20,
         name: "Lige 412 Stainless Steel Touch Screen Sport Fitness Watche For android iOS - Golden Chain",
         image: "/assets/watch/PHOTO-2024-11-14-20-57-58.jpg",
         price: "5000",
         discount_price: "",
       },
       {
+        id:21,
         name: "Wavefun Aidig S smart Watch - Black",
         image: "/assets/watch/PHOTO-2024-11-14-21-00-24.jpg",
         price: "5000",
         discount_price: "",
       },
       {
+        id:22,
         name: "CMF by Nothing Watch Pro Smart Watch - Dark Grey - NTG-WC",
         image: "/assets/watch/PHOTO-2024-11-14-21-59-40.jpg",
         price: "10999",
@@ -253,30 +275,35 @@ const productDetails = [
     ],
     earbuds: [
       {
+        id:23,
         name: "Wavefun T200 TWS Wireless Earbuds - Black",
         image: "/assets/earbuds/PHOTO-2024-11-14-21-04-34.jpg",
         price: "5999",
         discount_price: "4427",
       },
       {
+        id:24,
         name: "Remax RB-S2 Magnet Sports Earphone Bluetooth Headset - Black",
         image: "/assets/earbuds/PHOTO-2024-11-14-21-05-58.jpg",
         price: "5999",
         discount_price: "4427",
       },
       {
+        id:25,
         name: "CMF by Nothing True Wireless Earbuds with Active Noise Cancellation - Orange - NTG-EBO",
         image: "/assets/earbuds/PHOTO-2024-11-14-21-56-04.jpg",
         price: "5999",
         discount_price: "4427",
       },
       {
+        id:26,
         name: "CMF by Nothing True Wireless Earbuds with Active Noise Cancellation - Light Grey - NTG-EBL",
         image: "/assets/earbuds/PHOTO-2024-11-14-21-57-42.jpg",
         price: "5999",
         discount_price: "4427",
       },
       {
+        id:27,
         name: "CMF by Nothing Neckband Pro With Active Noise Cancellation - Orange - NTG-NCo",
         image: "/assets/earbuds/PHOTO-2024-11-14-22-01-43.jpg",
         price: "3999",
@@ -285,18 +312,21 @@ const productDetails = [
     ],
     bag: [
       {
+        id:28,
         name: "WILLIAMPOLO Synthetic Leather Slim 15.6 inch Laptop Backpack - Black",
         image: "/assets/bag/PHOTO-2024-11-14-22-10-21.jpg",
         price: "10000",
         discount_price: "6077",
       },
       {
+        id:29,
         name: "Artic Hunter Oxford Backpack And Laptop Bag - Black",
         image: "/assets/bag/PHOTO-2024-11-14-22-10-21.jpg",
         price: "1790",
         discount_price: "720",
       },
       {
+        id:30,
         name: "WiWU Macbook Mate Accessories Bag - Black",
         image: "/assets/bag/PHOTO-2024-11-14-22-13-21.jpg",
         price: "1700",
@@ -304,6 +334,7 @@ const productDetails = [
       },
       
       {
+        id:31,
         name: "WiWU Polyester Minimalist Travel Pouch Electronics Macbook Accessories Bag - Gray",
         image: "/assets/bag/PHOTO-2024-11-14-22-14-42.jpg",
         price: "1500",
@@ -312,6 +343,7 @@ const productDetails = [
     ],
     battery: [
       {
+        id:32,
         name: "Kinyear Battery",
         image: "/assets/battery/PHOTO-2024-11-14-22-58-19.jpg",
         price: "14000",
@@ -320,6 +352,7 @@ const productDetails = [
     ],
     electric_tricycle: [
       {
+        id:33,
         name: "Electric Tricycle",
         image: "/assets/electric_tricycle/PHOTO-2024-11-14-22-56-56.jpg",
         price: "160000",
@@ -328,6 +361,7 @@ const productDetails = [
     ],
     electronics: [
       {
+        id:34,
         name: "Lenovo 60.96 cm (24 inch) Full HD VA Panel with 300 nits brightness, 95% sRGB Gaming Monitor",
         image: "/assets/electronic/PHOTO-2024-11-14-22-53-11.jpg",
         price: "50000",

@@ -74,7 +74,7 @@ export default function ProductCard({ all_product }) {
                   <FaHeart />
                 </button>
                 <button
-                  onClick={() => onAddToBagClick(item, index + 1)}
+                  onClick={() => onAddToBagClick(item)}
                   className={style.addtobag}
                 >
                   {" "}
