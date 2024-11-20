@@ -16,6 +16,7 @@ export default function CardProduct() {
   const [discount, setDiscount] = useState(0);
   const dispatch = useDispatch();
   const card_item = useSelector((state) => state.productCard.cardValue);
+
   function onCloseClick() {
     dispatch(setCardShowPop(false));
     document.body.style.overflow = "auto";
@@ -78,6 +79,7 @@ export default function CardProduct() {
     dispatch(setShowCard(newItems));
     window.localStorage.setItem("cardValue", JSON.stringify(newItems));
   }
+
   return (
     <>
       <div onClick={onOutsiteClick} className={style.overlay}></div>
@@ -92,6 +94,7 @@ export default function CardProduct() {
           {card_item.map((item, index) => {
             return (
               <div key={index} className={style.item_wrapper}>
+                {console.log(item)}
                 <div className={style.image_wrapper}>
                   <Image alt={item.name} fill src={item.image} />
                 </div>
