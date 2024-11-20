@@ -7,18 +7,10 @@ export default function TwoBanner() {
     <div className={style.wrapper}>
       <div className={style.holder}>
         <Link href="/" className={style.image_wrapper}>
-          <Image
-            fill
-            src="/assets/two_banner/banner1.jpg"
-            alt="#"
-          />
+          <Image fill src="/assets/two_banner/banner1.png" alt="#" />
         </Link>
         <Link href="/" className={style.image_wrapper}>
-          <Image
-            fill
-            src="/assets/slider/slider5.jpg"
-            alt="#"
-          />
+          <Image fill src="/assets/slider/slider6.png" alt="#" />
         </Link>
       </div>
     </div>
