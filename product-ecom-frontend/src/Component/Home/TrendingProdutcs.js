@@ -16,7 +16,7 @@ export default function TrendingProdutcs() {
     <div className={style.wrapper}>
       <h2>Trending Produtcs</h2>
       <div className={style.holder}>
-        <ProductCard all_product={trandingProduct} />;
+        <ProductCard all_product={trandingProduct} />
       </div>
     </div>
   );

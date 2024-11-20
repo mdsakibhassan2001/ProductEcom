@@ -1,19 +1,19 @@
 .wrapper {
-  padding: 50px 0;
+  padding: 40px 0 20px 0;
   background-color: var(--light);
 }
 .holder {
   max-width: 1200px;
   width: 90%;
   margin: auto;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   display: grid;
-  gap: 40px;
+  gap: 20px;
   overflow: hidden;
 }
 .image_wrapper {
   position: relative;
-  aspect-ratio:350/139;
+  aspect-ratio:2/1;
 }
 .image_wrapper img {
   border-radius: 4px;
@@ -24,7 +24,15 @@
   transform: scale(0.95);
 }
 @media screen and (min-width: 992px) {
+  .wrapper {
+    padding: 50px 0;
+    background-color: var(--light);
+  }
   .holder {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  .image_wrapper {
+    position: relative;
+    aspect-ratio:350/139;
   }
 }

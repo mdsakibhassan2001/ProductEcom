@@ -107,12 +107,17 @@
   justify-content: center;
   gap: 5px;
 }
+.parcent{
+  font-size: 12px;
+  
+}
 .price_wrapper .price {
-  font-weight: 300;
+  font-weight: 500;
   align-items: center;
   display: flex;
-  font-size: 12px;
+  font-size: 13px;
   text-decoration-line: line-through;
+  color: var(--gray);
 }
 .price_wrapper small {
   color: var(--theme_dive);
@@ -126,8 +131,9 @@
   display: flex;
   align-items: center;
   font-weight: 500;
-  color: var(--dark);
+  color: var(--logo-color);
   margin-right: 8px;
+  font-size: 1rem;
 }
 
 @media screen and (min-width: 992px) {

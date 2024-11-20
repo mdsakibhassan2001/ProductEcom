@@ -302,12 +302,7 @@ const productDetails = [
         price: "1700",
         discount_price: "1530",
       },
-      {
-        name: "WiWU Polyester Minimalist Travel Pouch Electronics Macbook Accessories Bag - Gray",
-        image: "/assets/bag/PHOTO-2024-11-14-22-14-42.jpg",
-        price: "1500",
-        discount_price: "1305",
-      },
+      
       {
         name: "WiWU Polyester Minimalist Travel Pouch Electronics Macbook Accessories Bag - Gray",
         image: "/assets/bag/PHOTO-2024-11-14-22-14-42.jpg",
@@ -319,8 +314,8 @@ const productDetails = [
       {
         name: "Kinyear Battery",
         image: "/assets/battery/PHOTO-2024-11-14-22-58-19.jpg",
-        price: "16000",
-        discount_price: "12000",
+        price: "14000",
+        discount_price: "",
       },
     ],
     electric_tricycle: [

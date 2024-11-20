@@ -37,7 +37,12 @@ export default function ProductCard({ all_product }) {
             </Link>
             <div className={style.card_body}>
               <div className={style.title}>
-                <small>Just For Baby</small>
+              {item.discount_price > 0 ? (
+                  <small className={style.parcent}>{((item.price - item.discount_price) / item.price * 100).toFixed(2)}% off</small>
+
+                ) : (
+                  <small>0.00% off</small>
+                )}
                 <small className={style.star_icon}>
                   <IoStar />
                   <IoStar />
@@ -51,20 +56,16 @@ export default function ProductCard({ all_product }) {
                 {item.discount_price > 0 ? (
                   <span className={style.offer_price}>
                     <FaBangladeshiTakaSign />
-                    {item.discount_price}
+                    {item.discount_price+".00"}
                   </span>
                 ) : (
                   ""
                 )}
-                <span className={item.discount_price > 0 ? style.price : ""}>
+                <span className={item.discount_price > 0 ? style.price : style.offer_price}>
                   <FaBangladeshiTakaSign />
-                  {item.price}{" "}
+                  {item.price+".00"}{" "}
                 </span>
-                {item.discount_price > 0 ? (
-                  <small>{item.discount_price}% off</small>
-                ) : (
-                  ""
-                )}
+               
               </div>
             </div>
             <div className={style.card_footer}>

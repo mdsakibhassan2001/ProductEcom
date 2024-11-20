@@ -15,7 +15,7 @@ export default function BestSellingProduct() {
     <div className={style.wrapper}>
       <h2>Best Selling Products</h2>
       <div className={style.holder}>
-        <ProductCard all_product={shuffledProducts} />;
+        <ProductCard all_product={shuffledProducts} />
       </div>
     </div>
   );
